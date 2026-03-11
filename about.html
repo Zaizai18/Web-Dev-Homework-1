@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<header>
+<div class="brand">
+  <h1 class="halal">HALAL</h1>
+  <img src="image/Halal munchies logo.png" alt="Halal Munchies Logo" class ="logo">
+  <h1 class="munchies">Munchies</h1>
+</div>
+
+<button class="nav-toggle" onclick="toggleNav()">&#9776;</button>
+
+<nav>
+<a href="index.html">HOME</a>
+<a href="menu.html">MENU</a>
+<a href="about.html">ABOUT</a>
+<a href="contact.html">CONTACT</a>
+</nav>
+</header>
+
+
+<h1>About Munchies</h1>
+
+<p class="p1">Halal Munchies is a popular halal restaurant in New York City known for
+its flavorful comfort food with exceptional service. We have multiple locations in NYC serving many classics like
+halal platters and gyros, burgers, seasoned fries, and salads. Every dish is made with quality ingredients perfect for any occasion. Whether you're grabbing a quick meal with friends, enjoying a late-night bite, or ordering for the whole family, Halal Munchies offers something for everyone. Our goal is to exceed your expectations and leave you craving more!</p>
+
+<img src="image/halal munchies.webp" style ="width:75%; height:100%; display: block; margin:30px auto;">
+
+<footer>
+<p> Hours: 11:00 AM to 3:00 AM (Vary by Location)</p>
+<p> Check your local Halal Munchies to confirm </p>
+<a href="https://www.facebook.com/halalmunchiesny/">Facebook</a>
+<a href="https://www.instagram.com/halalmunchies786/?hl=en">Instagram</a>
+</footer>
+
+<script>
+function toggleNav() {
+  const nav = document.querySelector('nav');
+  nav.classList.toggle('open');
+}
+const navLinks = document.querySelectorAll('nav a');
+navLinks.forEach(link =>
+  link.addEventListener('click', () => document.querySelector('nav').classList.remove('open'))
+);
+</script>
+</body>
+</html>

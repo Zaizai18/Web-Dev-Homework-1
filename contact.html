@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<header>
+<div class="brand">
+  <h1 class="halal">HALAL</h1>
+  <img src="image/Halal munchies logo.png" alt="Halal Munchies Logo" class ="logo">
+  <h1 class="munchies">Munchies</h1>
+</div>
+
+<button class="nav-toggle" onclick="toggleNav()">&#9776;</button>
+
+<nav>
+<a href="index.html">HOME</a>
+<a href="menu.html">MENU</a>
+<a href="about.html">ABOUT</a>
+<a href="contact.html">CONTACT</a>
+</nav>
+</header>
+
+<div class="contact-wrapper">
+  <section class="location-section">
+    <h3>Find a location near you</h3>
+    <iframe src="https://maps.google.com/maps?q=halal%20munchies%20new%20york&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+  </section>
+  <section class="contact-section">
+    <h3>Contact Our Team</h3>
+    <form>
+        <input type="text" placeholder="Name" required>
+        <input type="email" placeholder="Email" required>
+        <textarea placeholder="Message"></textarea>
+        <button class="button">Send</button>
+    </form>
+  </section>
+</div>
+
+<footer>
+<p> Hours: 11:00 AM to 3:00 AM (Vary by Location)</p>
+<p> Check your local Halal Munchies to confirm </p>
+<a href="https://www.facebook.com/halalmunchiesny/">Facebook</a>
+<a href="https://www.instagram.com/halalmunchies786/?hl=en">Instagram</a>
+</footer>
+
+<script>
+function toggleNav() {
+  const nav = document.querySelector('nav');
+  nav.classList.toggle('open');
+}
+const navLinks = document.querySelectorAll('nav a');
+navLinks.forEach(link =>
+  link.addEventListener('click', () => document.querySelector('nav').classList.remove('open'))
+);
+</script>
+</body>
+</html>

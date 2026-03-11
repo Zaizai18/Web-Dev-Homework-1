@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Halal Munchies</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<header>
+<div class="brand">
+  <h1 class="halal">HALAL</h1>
+  <img src="image/Halal munchies logo.png" alt="Halal Munchies Logo" class ="logo">
+  <h1 class="munchies">Munchies</h1>
+</div>
+
+<button class="nav-toggle" onclick="toggleNav()">&#9776;</button>
+
+<nav>
+<a href="index.html">HOME</a>
+<a href="menu.html">MENU</a>
+<a href="about.html">ABOUT</a>
+<a href="contact.html">CONTACT</a>
+</nav>
+</header>
+
+<div class="hero-image">
+  <div class="hero-text">
+    <h1>HALAL MUNCHIES</h1>
+    <p>The Best Halal Food in the City</p>
+    <a class="button" href="menu.html"> ORDER ONLINE </a>
+  </div>
+</div>
+
+<section class="gallery">
+
+<h2>Our Gallery</h2>
+
+<div class="slider">
+
+<input class="input1"type="radio" name="slide" id="s1" checked>
+<input class="input1" type="radio" name="slide" id="s2">
+<input class="input1" type="radio" name="slide" id="s3">
+<input class="input1" type="radio" name="slide" id="s4">
+<input class="input1" type="radio" name="slide" id="s5">
+<input class="input1" type="radio" name="slide" id="s6">
+
+<div class="slides">
+
+<img src="image/img1-432w.webp" class="slide1">
+<img src="image/interior.jpg" class="slide2" style = "width:75%; display:block; margin: auto;">
+<img src="image/images.jpg" class="slide3"style = "width:75%; display:block; margin: auto;">
+<img src="image/food 2.jpg" class="slide4">
+<img src="image/food 3.jpeg" class="slide5"style = width:75%; display:block; margin: auto;>
+<img src="image/food.avif" class="slide6" style = width:50%; display:block; margin: auto;>
+<img src="image/img1-432w.webp" class="slide1">
+<img src="image/interior.jpg" class="slide2" style = "width:50%; display:block; margin: auto;">
+<img src="image/images.jpg" class="slide3"style = "width:75%; display:block; margin: auto;">
+<img src="image/food 2.jpg" class="slide4">
+<img src="image/food 3.jpeg" class="slide5"style = width:75%; display:block; margin: auto;>
+<img src="image/food.avif" class="slide6" style = width:50%; display:block; margin: auto;>
+<img src="image/img1-432w.webp" class="slide1">
+<img src="image/interior.jpg" class="slide2" style = "width:50%; display:block; margin: auto;">
+<img src="image/images.jpg" class="slide3"style = "width:75%; display:block; margin: auto;">
+<img src="image/food 2.jpg" class="slide4">
+<img src="image/food 3.jpeg" class="slide5"style = width:75%; display:block; margin: auto;>
+<img src="image/food.avif" class="slide6" style = width:50%; display:block; margin: auto;>
+
+</div>
+
+<div class="navigation">
+<label for="s1"></label>
+<label for="s2"></label>
+<label for="s3"></label>
+<label for="s4"></label>
+<label for="s5"></label>
+<label for="s6"></label>
+</div>
+
+</div>
+
+</section>
+
+<footer>
+<p> Hours: 11:00 AM to 3:00 AM (Vary by Location)</p>
+<p> Check your local Halal Munchies to confirm </p>
+<a href="https://www.facebook.com/halalmunchiesny/">Facebook</a>
+<a href="https://www.instagram.com/halalmunchies786/?hl=en">Instagram</a>
+</footer>
+
+<script>
+  let slideIndex = 1;
+showSlide(slideIndex);
+
+function changeSlide(n) {
+  showSlide(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlide(slideIndex = n);
+}
+
+function showSlide(n) {
+  const slides = document.getElementsByClassName("slide");
+  const dots = document.getElementsByClassName("dot");
+
+  if (n > slides.length) slideIndex = 1;
+  if (n < 1) slideIndex = slides.length;
+
+  for (let slide of slides) {
+    slide.style.display = "none";
+  }
+
+  for (let dot of dots) {
+    dot.classList.remove("active");
+  }
+
+  slides[slideIndex - 1].style.display = "block";
+  dots[slideIndex - 1].classList.add("active");
+}
+
+function toggleNav() {
+  const nav = document.querySelector('nav');
+  nav.classList.toggle('open');
+}
+
+const navLinks = document.querySelectorAll('nav a');
+navLinks.forEach(link =>
+  link.addEventListener('click', () => document.querySelector('nav').classList.remove('open'))
+);
+
+</script>
+</body>
+</html>

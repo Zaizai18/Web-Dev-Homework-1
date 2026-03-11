@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Menu</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<header>
+<div class="brand">
+  <h1 class="halal">HALAL</h1>
+  <img src="image/Halal munchies logo.png" alt="Halal Munchies Logo" class ="logo">
+  <h1 class="munchies">Munchies</h1>
+</div>
+
+<button class="nav-toggle" onclick="toggleNav()">&#9776;</button>
+
+<nav>
+<a href="index.html">HOME</a>
+<a href="menu.html">MENU</a>
+<a href="about.html">ABOUT</a>
+<a href="contact.html">CONTACT</a>
+</nav>
+</header>
+
+<h1>Menu</h1>
+
+<div class="card-wrapper">
+<div class="card">
+  <img src="image/chicken over rice platter.png" alt="Avatar">
+  <div class="container">
+    <h4><b>Chicken Over Rice Platter</b></h4> 
+    <p>$10.99</p> 
+  </div>
+</div>
+
+<div class="card">
+  <img src="image/combo platter.png" alt="Avatar">
+  <div class="container">
+    <h4><b>Mix Combo Over Rice Platter</b></h4> 
+    <p>$10.99</p> 
+  </div>
+</div>
+
+<div class="card">
+  <img src="image/chicken cheese burger.png" alt="Avatar">
+  <div class="container">
+    <h4><b>Crispy Chicken Sandwhich</b></h4> 
+    <p>$6.99</p> 
+  </div>
+</div>
+
+<div class="card">
+  <img src="image/Garden salad.png" alt="Avatar">
+  <div class="container">
+    <h4><b>Garden Salad</b></h4> 
+    <p>$7.99</p> 
+  </div>
+</div>
+
+<div class="card">
+  <img src="image/icecream.png" alt="Avatar">
+  <div class="container">
+    <h4><b>Shahi Kulfi Icecream</b></h4> 
+    <p>$2.50</p> 
+  </div>
+</div>
+
+<div class="card">
+  <img src="image/chicken gyro.png" alt="Avatar">
+  <div class="container">
+    <h4><b>Chicken Gyro</b></h4> 
+    <p>$7.99</p> 
+  </div>
+</div>
+
+<div class="card">
+  <img src="image/chicken sandwhich combo.jpeg" alt="Avatar">
+  <div class="container">
+    <h4><b>Chicken Sandwhich & Fries Combo</b></h4> 
+    <p>$9.99</p> 
+  </div>
+</div>
+
+<div class="card">
+  <img src="image/red velvet.jpeg" alt="Avatar">
+  <div class="container">
+    <h4><b>Red Velvet Cake</b></h4> 
+    <p>$4.99</p> 
+  </div>
+</div>
+
+<div class="card">
+  <img src="image/tenders.png" alt="Avatar">
+  <div class="container">
+    <h4><b>5 Pieces Tenders</b></h4> 
+    <p>$9.99</p> 
+  </div>
+</div>
+</div> 
+
+<footer>
+<p> Hours: 11:00 AM to 3:00 AM (Vary by Location)</p>
+<p> Check your local Halal Munchies to confirm </p>
+<a href="https://www.facebook.com/halalmunchiesny/">Facebook</a>
+<a href="https://www.instagram.com/halalmunchies786/?hl=en">Instagram</a>
+</footer>
+
+<script>
+function toggleNav() {
+  const nav = document.querySelector('nav');
+  nav.classList.toggle('open');
+}
+
+const navLinks = document.querySelectorAll('nav a');
+navLinks.forEach(link =>
+  link.addEventListener('click', () => document.querySelector('nav').classList.remove('open'))
+);
+</script>
+</body>
+</html>
